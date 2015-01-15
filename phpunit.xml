@@ -1,0 +1,11 @@
+<phpunit
+    bootstrap="src/Calculator.php"
+    colors="true"
+    verbose="true"
+    >
+    <testsuites>
+        <testsuite name="calc">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
