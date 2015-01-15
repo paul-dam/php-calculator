@@ -32,9 +32,9 @@ class Calculator/*{{{*/
 
     public function divide($a, $b)/*{{{*/
     {
-        if (!$b) {
+        if (!$b) {/*{{{*/
             throw new InvalidArgumentException('Division by zero.');
-        }
+        }/*}}}*/
 
         $this->_result = $a / $b;
         return $this->_result;
