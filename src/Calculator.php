@@ -5,7 +5,7 @@
  */
 abstract class Calculator/*{{{*/
 {
-    protected $_additionInterface;
+    protected $_additionBehavior;
 
     public abstract function doAddition($a, $b);
     public abstract function doSubstraction($a, $b);
