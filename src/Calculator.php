@@ -30,4 +30,9 @@ abstract class Calculator/*{{{*/
     {
         return $this->$_divisionBehavior->divide($a, $b);
     }/*}}}*/
+
+    public function setAdditionBehavior($behavior)/*{{{*/
+    {
+        $this->$_additionBehavior = $behavior;
+    }/*}}}*/
 }/*}}}*/
