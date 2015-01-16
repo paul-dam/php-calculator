@@ -12,7 +12,6 @@ abstract class Calculator/*{{{*/
     protected $_divisionBehavior;
 
     public abstract function doMultiplication($a, $b);
-    public abstract function doDivision($a, $b);
     public function doAddition($a, $b)/*{{{*/
     {
         return $this->_additionBehavior->add($a, $b);
@@ -21,5 +20,10 @@ abstract class Calculator/*{{{*/
     public function doSubstraction($a, $b)/*{{{*/
     {
         return $this->$_substractionBehavior->substract($a, $b);
+    }/*}}}*/
+
+    public function doMultiplication($a, $b)/*{{{*/
+    {
+        return $this->$_multiplicationBehavior->multiply($a, $b);
     }/*}}}*/
 }/*}}}*/
