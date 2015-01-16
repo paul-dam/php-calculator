@@ -35,4 +35,9 @@ abstract class Calculator/*{{{*/
     {
         $this->$_additionBehavior = $behavior;
     }/*}}}*/
+
+    public function setSubstractionBehavior($behavior)/*{{{*/
+    {
+        $this->$_substractionBehavior = $behavior;
+    }/*}}}*/
 }/*}}}*/
