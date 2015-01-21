@@ -13,7 +13,7 @@ abstract class Calculator/*{{{*/
 
     public function doAddition($a, $b)/*{{{*/
     {
-        return $this->_additionBehavior->add($a, $b);
+        return $this->_additionBehavior->doAddition($a, $b);
     }/*}}}*/
 
     public function doSubstraction($a, $b)/*{{{*/
