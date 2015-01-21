@@ -12,7 +12,7 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
     public function testDoAddition($a, $b, $expected)/*{{{*/
     {
         $calculator = new DecimalCalculator();
-        $this->assertEqual($expected, $calculator->doAddition($a, $b));
+        $this->assertEquals($expected, $calculator->doAddition($a, $b));
     }/*}}}*/
 
     public function additionProvider()/*{{{*/
@@ -21,7 +21,7 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
             array(0, 0, 0),
             array(0, 1, 1),
             array(1, 0, 1),
-            array(1, 1, 3)
+            array(1, 1, 2)
         );
     }/*}}}*/
 }
