@@ -3,6 +3,7 @@
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.LongVariable)
+ * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
 abstract class Calculator/*{{{*/
 {
