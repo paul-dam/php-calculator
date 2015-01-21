@@ -6,5 +6,5 @@
 
 interface AdditionBehavior
 {
-    function doAddition($a, $b);
+    public function doAddition($a, $b);
 }
