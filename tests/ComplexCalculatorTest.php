@@ -17,10 +17,18 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true, true);
     }
 
+    /**
+     * testDoAddition
+     * @dataProvider additionProvider
+     */
     public function testDoAddition()
     {
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
+    }
+
+    public function additionProvider()
+    {
+        return array(
+            array(new Complex(1, 1), new Complex(1, 1), new Complex(2, 2)),
         );
     }
 }

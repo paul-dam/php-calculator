@@ -1,5 +1,7 @@
 <?php
 
+// Data types
+require_once 'Struct/Complex.php';
 // Interfaces
 require_once 'AdditionBehavior/AdditionBehavior.php';
 require_once 'DivisionBehavior/DivisionBehavior.php';
