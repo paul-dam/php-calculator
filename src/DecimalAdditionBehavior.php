@@ -6,7 +6,7 @@
 
 class DecimalAdditionBehavior implements AdditionBehavior
 {
-    public function doAddition($a, $b)
+    public function execute($a, $b)
     {
         return $a + $b;
     }
