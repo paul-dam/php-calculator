@@ -18,22 +18,22 @@ abstract class Calculator/*{{{*/
     }/*}}}*/
     public function doSubstraction($a, $b)/*{{{*/
     {
-        return $this->$_substractionBehavior->substract($a, $b);
+        return $this->_substractionBehavior->execute($a, $b);
     }/*}}}*/
     public function doMultiplication($a, $b)/*{{{*/
     {
-        return $this->$_multiplicationBehavior->multiply($a, $b);
+        return $this->_multiplicationBehavior->execute($a, $b);
     }/*}}}*/
     public function doDivision($a, $b)/*{{{*/
     {
-        return $this->$_divisionBehavior->divide($a, $b);
+        return $this->_divisionBehavior->execute($a, $b);
     }/*}}}*/
     public function setAdditionBehavior($behavior)/*{{{*/
     {
-        $this->$_additionBehavior = $behavior;
+        $this->_additionBehavior = $behavior;
     }/*}}}*/
     public function setSubstractionBehavior($behavior)/*{{{*/
     {
-        $this->$_substractionBehavior = $behavior;
+        $this->_substractionBehavior = $behavior;
     }/*}}}*/
 }/*}}}*/
