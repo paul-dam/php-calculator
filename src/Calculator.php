@@ -2,46 +2,46 @@
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
+ * @SuppressWarnings(PHPMD.LongVariable)
+ * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
-class Calculator/*{{{*/
+abstract class Calculator/*{{{*/
 {
-    private $_result;
+    protected $_additionBehavior;
+    protected $_substractionBehavior;
+    protected $_multiplicationBehavior;
+    protected $_divisionBehavior;
 
-    public function __construct()/*{{{*/
+    public function doAddition($a, $b)/*{{{*/
     {
-        $this->_result = 0;
+        return $this->_additionBehavior->execute($a, $b);
     }/*}}}*/
-
-    public function add($a = 0, $b = 0)/*{{{*/
+    public function doSubstraction($a, $b)/*{{{*/
     {
-        $this->_result = $a + $b;
-        return $this->_result;
+        return $this->_substractionBehavior->execute($a, $b);
     }/*}}}*/
-
-    public function substract($a, $b)/*{{{*/
+    public function doMultiplication($a, $b)/*{{{*/
     {
-        $this->_result = $a - $b;
-        return $this->_result;
+        return $this->_multiplicationBehavior->execute($a, $b);
     }/*}}}*/
-
-    public function multiply($a, $b)/*{{{*/
+    public function doDivision($a, $b)/*{{{*/
     {
-        $this->_result = $a * $b;
-        return $this->_result;
+        return $this->_divisionBehavior->execute($a, $b);
     }/*}}}*/
-
-    public function divide($a, $b)/*{{{*/
+    public function setAdditionBehavior($behavior)/*{{{*/
     {
-        if (!$b) {
-            throw new InvalidArgumentException('Division by zero.');
-        }
-
-        $this->_result = $a / $b;
-        return $this->_result;
+        $this->_additionBehavior = $behavior;
     }/*}}}*/
-
-    public function getResult()/*{{{*/
+    public function setSubstractionBehavior($behavior)/*{{{*/
     {
-        return $this->_result;
+        $this->_substractionBehavior = $behavior;
     }/*}}}*/
+    public function setDivisionBehavior($behavior)/*{{{*/
+    {
+        $this->_divisionBehavior = $behavior;
+    }/*}}}*/
+    public function setMultiplicationBehavior($behavior)
+    {
+        $this->_multiplicationBehavior = $behavior;
+    }
 }/*}}}*/
