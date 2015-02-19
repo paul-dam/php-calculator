@@ -40,4 +40,8 @@ abstract class Calculator/*{{{*/
     {
         $this->_divisionBehavior = $behavior;
     }/*}}}*/
+    public function setMultiplicationBehavior($behavior)
+    {
+        $this->_multiplicationBehavior = $behavior;
+    }
 }/*}}}*/
