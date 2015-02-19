@@ -6,5 +6,6 @@ class DecimalCalculator extends Calculator
     {
         $this->_additionBehavior = new DecimalAdditionBehavior();
         $this->_divisionBehavior = new DecimalDivisionBehavior();
+        $this->_substractionBehavior = new DecimalSubstractionBehavior();
     }
 }
