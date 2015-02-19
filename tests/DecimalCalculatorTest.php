@@ -5,14 +5,20 @@
  */
 class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
 {
+    protected $_calculator;
+
+    public function setUp()/*{{{*/
+    {
+        $this->_calculator = new DecimalCalculator();
+    }/*}}}*/
+
     /**
      * testDoAddition
      * @dataProvider additionProvider
      */
     public function testDoAddition($a, $b, $expected)/*{{{*/
     {
-        $calculator = new DecimalCalculator();
-        $this->assertEquals($expected, $calculator->doAddition($a, $b));
+        $this->assertEquals($expected, $this->_calculator->doAddition($a, $b));
     }/*}}}*/
 
     public function additionProvider()/*{{{*/
@@ -31,8 +37,8 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
      */
     public function testDoDivision($a, $b, $expected)/*{{{*/
     {
-        $calculator = new DecimalCalculator();
-        $this->assertEquals($expected, $calculator->doDivision($a, $b));
+        $actual = $this->_calculator->doDivision($a, $b);
+        $this->assertEquals($expected, $actual);
     }/*}}}*/
 
     public function divisionProvider()/*{{{*/
@@ -52,8 +58,8 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
      */
     public function testDoDivisionException($a, $b, $expected)/*{{{*/
     {
-        $calculator = new DecimalCalculator();
-        $this->assertEquals($expected, $calculator->doDivision($a, $b));
+        $actual = $this->_calculator->doDivision($a, $b);
+        $this->assertEquals($expected, $actual);
     } /*}}}*/
 
     public function divisionProviderException()/*{{{*/
@@ -68,13 +74,13 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
      * testDoSubstraction
      * @dataProvider substractionProvider
      */
-    public function testDoSubstraction($a, $b, $expected)
+    public function testDoSubstraction($a, $b, $expected)/*{{{*/
     {
-        $calculator = new DecimalCalculator();
-        $this->assertEquals($expected, $calculator->doSubstraction($a, $b));
-    }
+        $actual = $this->_calculator->doSubstraction($a, $b);
+        $this->assertEquals($expected, $actual);
+    }/*}}}*/
 
-    public function substractionProvider()
+    public function substractionProvider()/*{{{*/
     {
         return array(
             array(0, 0, 0),
@@ -84,7 +90,7 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
             array(2, 1, 1),
             array(1, 0.5, 0.5)
         );
-    }
+    }/*}}}*/
 
 
     /**
@@ -108,4 +114,3 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
         );
     }
 }
-
