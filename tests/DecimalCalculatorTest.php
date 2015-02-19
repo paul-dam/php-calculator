@@ -85,5 +85,27 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
             array(1, 0.5, 0.5)
         );
     }
+
+
+    /**
+     * testDoSubstraction
+     * @dataProvider multiplycationProvider
+     */
+    public function testDoMultiplication($a, $b, $expected)/*{{{*/
+    {
+        $actual = $this->_calculator->doMultiplication($a, $b);
+        $this->assertEquals($expected, $actual);
+    }/*}}}*/
+
+    public function multiplycationProvider()
+    {
+        return array(
+            array(0, 0, 0),
+            array(1, 0, 0),
+            array(0, 1, 0),
+            array(1, 1, 1),
+            array(7, 9, 63),
+        );
+    }
 }
 
