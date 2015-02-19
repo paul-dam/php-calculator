@@ -21,13 +21,12 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
      * testDoAddition
      * @dataProvider additionProvider
      */
-    public function testDoAddition($a, $b, $expected)
+    public function testDoAddition($a, $b, $expected)/*{{{*/
     {
         $actual = $this->_calculator->doAddition($a, $b);
         assertEquals($expected, $actual);
-    }
-
-    public function additionProvider()
+    }/*}}}*/
+    public function additionProvider()/*{{{*/
     {
         return array(
             array(new Complex(1, 1), new Complex(1, 1), new Complex(2, 2)),
@@ -46,5 +45,5 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
             array(new Complex(1, 0), new Complex(-1, 1), new Complex(0, 1)),
             array(new Complex(1, -1), new Complex(-1, 1), new Complex(0, 0)),
         );
-    }
+    }/*}}}*/
 }
