@@ -1,5 +1,5 @@
 <phpunit
-    bootstrap="src/Calculator.php"
+    bootstrap="src/bootstrap.php"
     colors="true"
     verbose="true"
     >
