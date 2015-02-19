@@ -9,4 +9,3 @@ interface SubstractionBehavior
 {
     public function execute($a, $b);
 }
-

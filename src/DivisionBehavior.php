@@ -9,4 +9,3 @@ interface DivisionBehavior
 {
     public function execute($a, $b);
 }
-

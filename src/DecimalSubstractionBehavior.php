@@ -12,4 +12,3 @@ class DecimalSubstractionBehavior implements SubstractionBehavior
         return ($a - $b);
     }
 }
-

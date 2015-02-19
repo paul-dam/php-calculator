@@ -10,4 +10,3 @@ require_once 'DecimalSubstractionBehavior.php';
 require_once 'DecimalMultiplicationBehavior.php';
 require_once 'Calculator.php';
 require_once 'DecimalCalculator.php';
-
