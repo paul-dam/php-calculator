@@ -60,7 +60,7 @@ class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
     {
         return array(
             array(0, 0, 0),
-            array(1, 0, 1)
+            array(1, 0, 1),
         );
     }/*}}}*/
 }

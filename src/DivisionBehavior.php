@@ -7,6 +7,6 @@
  */
 interface DivisionBehavior
 {
-    public function doDivision($a, $b);
+    public function execute($a, $b);
 }
 

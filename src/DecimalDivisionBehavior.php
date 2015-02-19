@@ -7,7 +7,7 @@
  */
 class DecimalDivisionBehavior implements DivisionBehavior
 {
-    public function doDivision($a, $b)
+    public function execute($a, $b)
     {
         if (0 === $b) 
             throw new InvalidArgumentException(
