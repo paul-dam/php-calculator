@@ -24,7 +24,7 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
     public function testDoAddition($a, $b, $expected)/*{{{*/
     {
         $actual = $this->_calculator->doAddition($a, $b);
-        assertEquals($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }/*}}}*/
     public function additionProvider()/*{{{*/
     {

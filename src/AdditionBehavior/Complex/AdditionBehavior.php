@@ -5,8 +5,8 @@ class ComplexAdditionBehavior implements AdditionBehavior
     public function execute($left, $right)
     {
         $result = new Complex();
-        $result->re($left->re() + $right->re());
-        $result->im($left->im() + $right->im());
+        $result->setRe($left->getRe() + $right->getRe());
+        $result->setIm($left->getIm() + $right->getIm());
 
         return($result);
     }
