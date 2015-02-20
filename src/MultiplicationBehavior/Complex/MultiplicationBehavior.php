@@ -7,6 +7,10 @@ class ComplexMultiplicationBehavior implements MultiplicationBehavior
 {
     public function execute($left, $right)
     {
-        throw new Exception('Not implemented');
+        $result = new Complex();
+        $result->setRe(( $left->getRe() * $right->getRe() ) - ( $left->getIm() * $right->getIm() ));
+        $result->setRe(( $left->getIm() * $right->getRe() ) - ( $left->getRe() * $right->getIm() ));
+
+        return($result);
     }
 }

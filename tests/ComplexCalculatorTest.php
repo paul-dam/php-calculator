@@ -74,8 +74,22 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
 
     /**
      * testDoMultiplication
+     * @dataProvider multiplicationProvider
      */
-    public function testDoMultiplication() {
-        $this->assertEquals(true, true);
-    }
+    public function testDoMultiplication($a, $b, $expected) {/*{{{*/
+        $actual = $this->_calculator->doMultiplication($a, $b);
+        $this->assertEquals($expected, $actual);
+    }/*}}}*/
+
+    public function multiplicationProvider()/*{{{*/
+    {
+        return array(
+            array(new Complex(1, 1), new Complex(1, 1), new Complex(0, 2)),
+            array(new Complex(2, 1), new Complex(1, 2), new Complex(0, 5)),
+            array(new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)),
+            array(new Complex(-1, 1), new Complex(1, -1), new Complex(0, 2)),
+            array(new Complex(-2, 1), new Complex(1, -2), new Complex(0, 5)),
+        );
+    }/*}}}*/
+
 }
