@@ -9,7 +9,7 @@ class ComplexMultiplicationBehavior implements MultiplicationBehavior
     {
         $result = new Complex();
         $result->setRe(( $left->getRe() * $right->getRe() ) - ( $left->getIm() * $right->getIm() ));
-        $result->setRe(( $left->getIm() * $right->getRe() ) - ( $left->getRe() * $right->getIm() ));
+        $result->setIm(( $left->getIm() * $right->getRe() ) + ( $left->getRe() * $right->getIm() ));
 
         return($result);
     }
