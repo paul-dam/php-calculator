@@ -12,11 +12,6 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
         $this->_calculator = new ComplexCalculator();
     }
 
-    public function testTrue()
-    {
-        $this->assertEquals(true, true);
-    }
-
     /**
      * testDoAddition
      * @dataProvider additionProvider
@@ -26,6 +21,7 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
         $actual = $this->_calculator->doAddition($a, $b);
         $this->assertEquals($expected, $actual);
     }/*}}}*/
+
     public function additionProvider()/*{{{*/
     {
         return array(
@@ -46,15 +42,17 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
             array(new Complex(1, -1), new Complex(-1, 1), new Complex(0, 0)),
         );
     }/*}}}*/
+
     /**
      * testDoSubstraction
      * @dataProvider substractionProvider
      */
-    public function testDoSubstraction($a, $b, $expected) {
+    public function testDoSubstraction($a, $b, $expected) {/*{{{*/
         $actual = $this->_calculator->doSubstraction($a, $b);
         $this->assertEquals($expected, $actual);
-    }
-    public function substractionProvider() {
+    }/*}}}*/
+
+    public function substractionProvider() {/*{{{*/
         return array(
             array(new Complex(1, 1), new Complex(1, 1), new Complex(0, 0)),
             array(new Complex(0, 1), new Complex(1, 1), new Complex(-1, 0)),
@@ -72,5 +70,6 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
             array(new Complex(1, 0), new Complex(-1, 1), new Complex(2, -1)),
             array(new Complex(1, -1), new Complex(-1, 1), new Complex(2, -2)),
         );
-    }
+    }/*}}}*/
+
 }
