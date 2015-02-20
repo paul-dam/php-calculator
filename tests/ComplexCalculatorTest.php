@@ -72,4 +72,10 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
         );
     }/*}}}*/
 
+    /**
+     * testDoMultiplication
+     */
+    public function testDoMultiplication() {
+        $this->assertEquals(true, true);
+    }
 }
