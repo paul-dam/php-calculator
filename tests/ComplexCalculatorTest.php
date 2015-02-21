@@ -111,4 +111,22 @@ class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
             array(new Complex(-2, 1), new Complex(1, -2), new Complex(-0.8, -0.6)),
         );
     }
+
+    /**
+     * testDoDivisionException
+     * @dataProvider divisionExceptionProvider
+     * @expectedException InvalidArgumentException
+     */
+    public function testDoDivisionException($a, $b, $expected)
+    {
+        $actual = $this->_calculator->doDivision($a, $b);
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function divisionExceptionProvider()
+    {
+        return array(
+            array(new Complex(-2, 1), new Complex(0, 0), new Complex(-0.8, -0.6)),
+        );
+    }
 }
