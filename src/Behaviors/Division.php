@@ -1,11 +1,11 @@
-<?php
+<?php namespace Pdam\Behaviors;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.LongVariable)
  * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
-interface DivisionBehavior
+interface Division
 {
     public function execute($a, $b);
 }

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Pdam\Struct;
 
 class Complex
 {

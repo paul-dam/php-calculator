@@ -1,9 +1,12 @@
-<?php
+<?php namespace Test\Pdam\Calculator;
+
+use \Pdam\Struct\Complex;
+use \Pdam\Calculator\Complex as ComplexCalculator;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  */
-class ComplexCalculatorTest extends PHPUnit_Framework_TestCase
+class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $_calculator;
 

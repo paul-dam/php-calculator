@@ -1,10 +1,13 @@
-<?php
+<?php namespace Pdam\Behaviors\Addition;
 
-class ComplexAdditionBehavior implements AdditionBehavior
+use \Pdam\Behaviors\Addition;
+use \Pdam\Struct\Complex as StructComplex;
+
+class Complex implements Addition
 {
     public function execute($left, $right)
     {
-        $result = new Complex();
+        $result = new StructComplex();
         $result->setRe($left->getRe() + $right->getRe());
         $result->setIm($left->getIm() + $right->getIm());
 

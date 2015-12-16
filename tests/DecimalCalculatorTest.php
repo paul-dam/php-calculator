@@ -1,9 +1,11 @@
-<?php
+<?php namespace Test\Pdam\Calculator;
+
+use \Pdam\Calculator\Decimal as DecimalCalculator;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  */
-class DecimalCalculatorTest extends PHPUnit_Framework_TestCase
+class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $_calculator;
 
