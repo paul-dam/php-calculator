@@ -22,5 +22,8 @@
             "name": "Paweł Damasiewicz",
             "email": "pawel.damasiewicz@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "test": "./vendor/bin/phpunit --colors=always"
+    }
 }
