@@ -4,6 +4,5 @@ php:
   - 'hhvm'
   - '7.0'
 
-install:
-    script: 'composer install'
+install: composer install
    
