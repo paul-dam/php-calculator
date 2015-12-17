@@ -9,7 +9,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pdam\\": "src/",
+            "Pdam\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Test\\Pdam\\": "tests/"
         }
     },
