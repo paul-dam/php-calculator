@@ -1,5 +1,5 @@
 # PHP Calculator library
-[![Build Status](https://drone.io/bitbucket.org/pawel_damasiewicz/calculator/status.png)](https://drone.io/bitbucket.org/pawel_damasiewicz/calculator/latest)
+[![Build Status](https://travis-ci.org/pawel-damasiewicz/php-calculator.svg?branch=master)](https://travis-ci.org/pawel-damasiewicz/php-calculator)
 
 ## Requirements
  - php 5.5
