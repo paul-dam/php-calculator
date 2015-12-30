@@ -25,12 +25,12 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function additionProvider()/*{{{*/
     {
-        return array(
-            array(0, 0, 0),
-            array(0, 1, 1),
-            array(1, 0, 1),
-            array(1, 1, 2)
-        );
+        return [
+            [0, 0, 0],
+            [0, 1, 1],
+            [1, 0, 1],
+            [1, 1, 2]
+        ];
     }/*}}}*/
 
     /**
@@ -45,12 +45,12 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function divisionProvider()/*{{{*/
     {
-        return array(
-            array(0, 1, 0),
-            array(1, 1, 1),
-            array(2, 1, 2),
-            array(1, 2, 0.5)
-        );
+        return [
+            [0, 1, 0],
+            [1, 1, 1],
+            [2, 1, 2],
+            [1, 2, 0.5]
+        ];
     }/*}}}*/
 
     /**
@@ -66,10 +66,10 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function divisionProviderException()/*{{{*/
     {
-        return array(
-            array(0, 0, 0),
-            array(1, 0, 1),
-        );
+        return [
+            [0, 0, 0],
+            [1, 0, 1],
+        ];
     }/*}}}*/
 
     /**
@@ -84,14 +84,14 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function substractionProvider()/*{{{*/
     {
-        return array(
-            array(0, 0, 0),
-            array(1, 0, 1),
-            array(1, 1, 0),
-            array(0, 1, -1),
-            array(2, 1, 1),
-            array(1, 0.5, 0.5)
-        );
+        return [
+            [0, 0, 0],
+            [1, 0, 1],
+            [1, 1, 0],
+            [0, 1, -1],
+            [2, 1, 1],
+            [1, 0.5, 0.5]
+        ];
     }/*}}}*/
 
 
@@ -107,12 +107,12 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function multiplycationProvider()
     {
-        return array(
-            array(0, 0, 0),
-            array(1, 0, 0),
-            array(0, 1, 0),
-            array(1, 1, 1),
-            array(7, 9, 63),
-        );
+        return [
+            [0, 0, 0],
+            [1, 0, 0],
+            [0, 1, 0],
+            [1, 1, 1],
+            [7, 9, 63],
+        ];
     }
 }

@@ -8,7 +8,7 @@ use \Pdam\Calculator\Complex as ComplexCalculator;
  */
 class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    protected $_calculator;
+    protected $calculator;
 
     public function setUp()
     {
@@ -27,23 +27,23 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function additionProvider()/*{{{*/
     {
-        return array(
-            array(new Complex(1, 1), new Complex(1, 1), new Complex(2, 2)),
-            array(new Complex(0, 1), new Complex(1, 1), new Complex(1, 2)),
-            array(new Complex(-1, 1), new Complex(1, 1), new Complex(0, 2)),
-            array(new Complex(1, 0), new Complex(1, 1), new Complex(2, 1)),
-            array(new Complex(1, -1), new Complex(1, 1), new Complex(2, 0)),
-            array(new Complex(1, 1), new Complex(0, 1), new Complex(1, 2)),
-            array(new Complex(0, 1), new Complex(0, 1), new Complex(0, 2)),
-            array(new Complex(-1, 1), new Complex(0, 1), new Complex(-1, 2)),
-            array(new Complex(1, 0), new Complex(0, 1), new Complex(1, 1)),
-            array(new Complex(1, -1), new Complex(0, 1), new Complex(1, 0)),
-            array(new Complex(1, 1), new Complex(-1, 1), new Complex(0, 2)),
-            array(new Complex(0, 1), new Complex(-1, 1), new Complex(-1, 2)),
-            array(new Complex(-1, 1), new Complex(-1, 1), new Complex(-2, 2)),
-            array(new Complex(1, 0), new Complex(-1, 1), new Complex(0, 1)),
-            array(new Complex(1, -1), new Complex(-1, 1), new Complex(0, 0)),
-        );
+        return [
+            [new Complex(1, 1), new Complex(1, 1), new Complex(2, 2)],
+            [new Complex(0, 1), new Complex(1, 1), new Complex(1, 2)],
+            [new Complex(-1, 1), new Complex(1, 1), new Complex(0, 2)],
+            [new Complex(1, 0), new Complex(1, 1), new Complex(2, 1)],
+            [new Complex(1, -1), new Complex(1, 1), new Complex(2, 0)],
+            [new Complex(1, 1), new Complex(0, 1), new Complex(1, 2)],
+            [new Complex(0, 1), new Complex(0, 1), new Complex(0, 2)],
+            [new Complex(-1, 1), new Complex(0, 1), new Complex(-1, 2)],
+            [new Complex(1, 0), new Complex(0, 1), new Complex(1, 1)],
+            [new Complex(1, -1), new Complex(0, 1), new Complex(1, 0)],
+            [new Complex(1, 1), new Complex(-1, 1), new Complex(0, 2)],
+            [new Complex(0, 1), new Complex(-1, 1), new Complex(-1, 2)],
+            [new Complex(-1, 1), new Complex(-1, 1), new Complex(-2, 2)],
+            [new Complex(1, 0), new Complex(-1, 1), new Complex(0, 1)],
+            [new Complex(1, -1), new Complex(-1, 1), new Complex(0, 0)],
+        ];
     }/*}}}*/
 
     /**
@@ -56,23 +56,23 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
     }/*}}}*/
 
     public function substractionProvider() {/*{{{*/
-        return array(
-            array(new Complex(1, 1), new Complex(1, 1), new Complex(0, 0)),
-            array(new Complex(0, 1), new Complex(1, 1), new Complex(-1, 0)),
-            array(new Complex(-1, 1), new Complex(1, 1), new Complex(-2, 0)),
-            array(new Complex(1, 0), new Complex(1, 1), new Complex(0, -1)),
-            array(new Complex(1, -1), new Complex(1, 1), new Complex(0, -2)),
-            array(new Complex(1, 1), new Complex(0, 1), new Complex(1, 0)),
-            array(new Complex(0, 1), new Complex(0, 1), new Complex(0, 0)),
-            array(new Complex(-1, 1), new Complex(0, 1), new Complex(-1, 0)),
-            array(new Complex(1, 0), new Complex(0, 1), new Complex(1, -1)),
-            array(new Complex(1, -1), new Complex(0, 1), new Complex(1, -2)),
-            array(new Complex(1, 1), new Complex(-1, 1), new Complex(2, 0)),
-            array(new Complex(0, 1), new Complex(-1, 1), new Complex(1, 0)),
-            array(new Complex(-1, 1), new Complex(-1, 1), new Complex(0, 0)),
-            array(new Complex(1, 0), new Complex(-1, 1), new Complex(2, -1)),
-            array(new Complex(1, -1), new Complex(-1, 1), new Complex(2, -2)),
-        );
+        return [
+            [new Complex(1, 1), new Complex(1, 1), new Complex(0, 0)],
+            [new Complex(0, 1), new Complex(1, 1), new Complex(-1, 0)],
+            [new Complex(-1, 1), new Complex(1, 1), new Complex(-2, 0)],
+            [new Complex(1, 0), new Complex(1, 1), new Complex(0, -1)],
+            [new Complex(1, -1), new Complex(1, 1), new Complex(0, -2)],
+            [new Complex(1, 1), new Complex(0, 1), new Complex(1, 0)],
+            [new Complex(0, 1), new Complex(0, 1), new Complex(0, 0)],
+            [new Complex(-1, 1), new Complex(0, 1), new Complex(-1, 0)],
+            [new Complex(1, 0), new Complex(0, 1), new Complex(1, -1)],
+            [new Complex(1, -1), new Complex(0, 1), new Complex(1, -2)],
+            [new Complex(1, 1), new Complex(-1, 1), new Complex(2, 0)],
+            [new Complex(0, 1), new Complex(-1, 1), new Complex(1, 0)],
+            [new Complex(-1, 1), new Complex(-1, 1), new Complex(0, 0)],
+            [new Complex(1, 0), new Complex(-1, 1), new Complex(2, -1)],
+            [new Complex(1, -1), new Complex(-1, 1), new Complex(2, -2)],
+        ];
     }/*}}}*/
 
     /**
@@ -86,13 +86,13 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function multiplicationProvider()/*{{{*/
     {
-        return array(
-            array(new Complex(1, 1), new Complex(1, 1), new Complex(0, 2)),
-            array(new Complex(2, 1), new Complex(1, 2), new Complex(0, 5)),
-            array(new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)),
-            array(new Complex(-1, 1), new Complex(1, -1), new Complex(0, 2)),
-            array(new Complex(-2, 1), new Complex(1, -2), new Complex(0, 5)),
-        );
+        return [
+            [new Complex(1, 1), new Complex(1, 1), new Complex(0, 2)],
+            [new Complex(2, 1), new Complex(1, 2), new Complex(0, 5)],
+            [new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)],
+            [new Complex(-1, 1), new Complex(1, -1), new Complex(0, 2)],
+            [new Complex(-2, 1), new Complex(1, -2), new Complex(0, 5)],
+        ];
     }/*}}}*/
 
     /**
@@ -106,13 +106,13 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function divisionProvider()
     {
-        return array(
-            array(new Complex(1, 1), new Complex(1, 1), new Complex(1, 0)),
-            array(new Complex(2, 1), new Complex(1, 2), new Complex(0.8, -0.6)),
-            array(new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)),
-            array(new Complex(-1, 1), new Complex(1, -1), new Complex(-1, 0)),
-            array(new Complex(-2, 1), new Complex(1, -2), new Complex(-0.8, -0.6)),
-        );
+        return [
+            [new Complex(1, 1), new Complex(1, 1), new Complex(1, 0)],
+            [new Complex(2, 1), new Complex(1, 2), new Complex(0.8, -0.6)],
+            [new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)],
+            [new Complex(-1, 1), new Complex(1, -1), new Complex(-1, 0)],
+            [new Complex(-2, 1), new Complex(1, -2), new Complex(-0.8, -0.6)],
+        ];
     }
 
     /**
@@ -128,8 +128,8 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
 
     public function divisionExceptionProvider()
     {
-        return array(
-            array(new Complex(-2, 1), new Complex(0, 0), new Complex(-0.8, -0.6)),
-        );
+        return [
+            [new Complex(-2, 1), new Complex(0, 0), new Complex(-0.8, -0.6)],
+        ];
     }
 }
