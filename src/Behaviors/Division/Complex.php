@@ -5,15 +5,37 @@ use Pdam\Struct\Complex as StructComplex;
 
 class Complex implements Division
 {
-    public function execute($left, $right)
+    public function execute($numenator, $denominator)
     {
         $result = new StructComplex();
-        if (0 == $right->getRe() && 0 == $right->getIm()) {
-            throw new \InvalidArgumentException('At least one of the real part and the imaginary part of the denominator must be nonzero for division to be defined.');
+        if (0 == $denominator->getRe()
+            && 0 == $denominator->getIm()
+        ) {
+            throw new \InvalidArgumentException(
+                'None of rational and imaginary part of denominator can not be 0.'
+            );
         }
 
-        $result->setRe((($left->getRe() * $right->getRe()) + ($left->getIm() * $right->getIm()))/(pow($right->getRe(), 2) + pow($right->getIm(), 2)));
-        $result->setIm((($left->getIm() * $right->getRe()) - ($left->getRe() * $right->getIm()))/(pow($right->getRe(), 2) + pow($right->getIm(), 2)));
+        $result->setRe(
+            (
+                ($numenator->getRe() * $denominator->getRe())
+                + ($numenator->getIm() * $denominator->getIm())
+            )
+            / (
+                pow($denominator->getRe(), 2)
+                + pow($denominator->getIm(), 2)
+            )
+        );
+        $result->setIm(
+            (
+                ($numenator->getIm() * $denominator->getRe())
+                - ($numenator->getRe() * $denominator->getIm())
+            )
+            / (
+                pow($denominator->getRe(), 2)
+                 + pow($denominator->getIm(), 2)
+            )
+        );
 
         return($result);
     }
