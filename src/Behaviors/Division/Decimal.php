@@ -2,20 +2,16 @@
 
 use Pdam\Behaviors\Division;
 
-/**
- * @SuppressWarnings(PHPMD.ShortVariable)
- * @SuppressWarnings(PHPMD.LongVariable)
- * @SuppressWarnings(PHPMD.UnusedLocalVariable)
- */
 class Decimal implements Division
 {
-    public function execute($a, $b)
+    public function execute($numerator, $denominator)
     {
-        if (0 === $b) 
+        if (0 === $denominator) {
             throw new \InvalidArgumentException(
                 'Drugi argument dzielenia nie może wynosić 0'
             );
-        else
-            return $a / $b;
+        }
+
+        return $numerator / $denominator;
     }
 }
