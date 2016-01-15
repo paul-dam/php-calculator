@@ -112,6 +112,7 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
             [new Complex(0, 1), new Complex(1, 0), new Complex(0, 1)],
             [new Complex(-1, 1), new Complex(1, -1), new Complex(-1, 0)],
             [new Complex(-2, 1), new Complex(1, -2), new Complex(-0.8, -0.6)],
+            [new Complex(-2, 1), new Complex(0, -2), new Complex(-0.5, -1)],
         ];
     }
 
