@@ -1,5 +1,10 @@
 <?php namespace Pdam;
 
+use Pdam\Behaviors\Addition;
+use Pdam\Behaviors\Division;
+use Pdam\Behaviors\Substraction;
+use Pdam\Behaviors\Multiplication;
+
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.LongVariable)
@@ -7,48 +12,61 @@
  */
 abstract class Calculator/*{{{*/
 {
-    protected $_additionBehavior;
-    protected $_substractionBehavior;
-    protected $_multiplicationBehavior;
-    protected $_divisionBehavior;
+    protected $additionBehavior;
+    protected $substractionBehavior;
+    protected $multiplicationBehavior;
+    protected $divisionBehavior;
+
+    public function __construct(
+        Addition $additionBehavior,
+        Division $divisionBehavior,
+        Substraction $substractionBehavior,
+        Multiplication $multiplicationBehavior
+    ) {
+        $this->additionBehavior = $additionBehavior;
+        $this->divisionBehavior = $divisionBehavior;
+        $this->substractionBehavior = $substractionBehavior;
+        $this->multiplicationBehavior = $multiplicationBehavior;
+    }
+
 
     public function doAddition($a, $b)/*{{{*/
     {
-        return $this->_additionBehavior->execute($a, $b);
+        return $this->additionBehavior->execute($a, $b);
     }/*}}}*/
 
     public function doSubstraction($a, $b)/*{{{*/
     {
-        return $this->_substractionBehavior->execute($a, $b);
+        return $this->substractionBehavior->execute($a, $b);
     }/*}}}*/
 
     public function doMultiplication($a, $b)/*{{{*/
     {
-        return $this->_multiplicationBehavior->execute($a, $b);
+        return $this->multiplicationBehavior->execute($a, $b);
     }/*}}}*/
 
     public function doDivision($a, $b)/*{{{*/
     {
-        return $this->_divisionBehavior->execute($a, $b);
+        return $this->divisionBehavior->execute($a, $b);
     }/*}}}*/
 
     public function setAdditionBehavior($behavior)/*{{{*/
     {
-        $this->_additionBehavior = $behavior;
+        $this->additionBehavior = $behavior;
     }/*}}}*/
 
     public function setSubstractionBehavior($behavior)/*{{{*/
     {
-        $this->_substractionBehavior = $behavior;
+        $this->substractionBehavior = $behavior;
     }/*}}}*/
 
     public function setDivisionBehavior($behavior)/*{{{*/
     {
-        $this->_divisionBehavior = $behavior;
+        $this->divisionBehavior = $behavior;
     }/*}}}*/
 
     public function setMultiplicationBehavior($behavior)/*{{{*/
     {
-        $this->_multiplicationBehavior = $behavior;
+        $this->multiplicationBehavior = $behavior;
     }/*}}}*/
 }/*}}}*/

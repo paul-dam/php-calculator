@@ -8,11 +8,17 @@ use \Pdam\Calculator;
 
 class Complex extends Calculator
 {
-    public function __construct() 
-    {
-        $this->_additionBehavior = new ComplexAdditionBehavior();
-        $this->_divisionBehavior = new ComplexDivisionBehavior();
-        $this->_substractionBehavior = new ComplexSubstractionBehavior();
-        $this->_multiplicationBehavior = new ComplexMultiplicationBehavior();
+    public function __construct() {
+        $additionBehavior = new ComplexAdditionBehavior();
+        $divisionBehavior = new ComplexDivisionBehavior();
+        $substractionBehavior = new ComplexSubstractionBehavior();
+        $multiplicationBehavior = new ComplexMultiplicationBehavior();
+
+        parent::__construct(
+            $additionBehavior,
+            $divisionBehavior,
+            $substractionBehavior,
+            $multiplicationBehavior
+        );
     }
 }

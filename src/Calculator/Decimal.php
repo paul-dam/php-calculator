@@ -8,11 +8,18 @@ use \Pdam\Calculator;
 
 class Decimal extends Calculator
 {
-    public function __construct() 
+    public function __construct()
     {
-        $this->_additionBehavior = new DecimalAdditionBehavior();
-        $this->_divisionBehavior = new DecimalDivisionBehavior();
-        $this->_substractionBehavior = new DecimalSubstractionBehavior();
-        $this->_multiplicationBehavior = new DecimalMultiplicationBehavior();
+        $additionBehavior = new DecimalAdditionBehavior();
+        $divisionBehavior = new DecimalDivisionBehavior();
+        $substractionBehavior = new DecimalSubstractionBehavior();
+        $multiplicationBehavior = new DecimalMultiplicationBehavior();
+
+        parent::__construct(
+            $additionBehavior,
+            $divisionBehavior,
+            $substractionBehavior,
+            $multiplicationBehavior
+        );
     }
 }
