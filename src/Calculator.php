@@ -10,7 +10,7 @@ use Pdam\Behaviors\Multiplication;
  * @SuppressWarnings(PHPMD.LongVariable)
  * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
-abstract class Calculator/*{{{*/
+abstract class Calculator
 {
     protected $additionBehavior;
     protected $substractionBehavior;
@@ -30,43 +30,43 @@ abstract class Calculator/*{{{*/
     }
 
 
-    public function doAddition($a, $b)/*{{{*/
+    public function doAddition($a, $b)
     {
         return $this->additionBehavior->execute($a, $b);
-    }/*}}}*/
+    }
 
-    public function doSubstraction($a, $b)/*{{{*/
+    public function doSubstraction($a, $b)
     {
         return $this->substractionBehavior->execute($a, $b);
-    }/*}}}*/
+    }
 
-    public function doMultiplication($a, $b)/*{{{*/
+    public function doMultiplication($a, $b)
     {
         return $this->multiplicationBehavior->execute($a, $b);
-    }/*}}}*/
+    }
 
-    public function doDivision($a, $b)/*{{{*/
+    public function doDivision($a, $b)
     {
         return $this->divisionBehavior->execute($a, $b);
-    }/*}}}*/
+    }
 
-    public function setAdditionBehavior($behavior)/*{{{*/
+    public function setAdditionBehavior($behavior)
     {
         $this->additionBehavior = $behavior;
-    }/*}}}*/
+    }
 
-    public function setSubstractionBehavior($behavior)/*{{{*/
+    public function setSubstractionBehavior($behavior)
     {
         $this->substractionBehavior = $behavior;
-    }/*}}}*/
+    }
 
-    public function setDivisionBehavior($behavior)/*{{{*/
+    public function setDivisionBehavior($behavior)
     {
         $this->divisionBehavior = $behavior;
-    }/*}}}*/
+    }
 
-    public function setMultiplicationBehavior($behavior)/*{{{*/
+    public function setMultiplicationBehavior($behavior)
     {
         $this->multiplicationBehavior = $behavior;
-    }/*}}}*/
-}/*}}}*/
+    }
+}
