@@ -1,9 +1,11 @@
-<?php namespace Pdam;
+<?php
+
+namespace Pdam;
 
 use Pdam\Behaviors\Addition;
 use Pdam\Behaviors\Division;
-use Pdam\Behaviors\Substraction;
 use Pdam\Behaviors\Multiplication;
+use Pdam\Behaviors\Substraction;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
@@ -28,7 +30,6 @@ abstract class Calculator
         $this->substractionBehavior = $substractionBehavior;
         $this->multiplicationBehavior = $multiplicationBehavior;
     }
-
 
     public function doAddition($a, $b)
     {

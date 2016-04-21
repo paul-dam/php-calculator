@@ -1,7 +1,9 @@
-<?php namespace Test\Pdam\Calculator;
+<?php
 
-use \Pdam\Struct\Complex;
-use \Pdam\Calculator\Complex as ComplexCalculator;
+namespace Test\Pdam\Calculator;
+
+use Pdam\Calculator\Complex as ComplexCalculator;
+use Pdam\Struct\Complex;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
@@ -16,14 +18,17 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * testDoAddition
+     * testDoAddition.
+     *
      * @dataProvider additionProvider
      */
     public function testDoAddition($a, $b, $expected)/*{{{*/
     {
         $actual = $this->_calculator->doAddition($a, $b);
         $this->assertEquals($expected, $actual);
-    }/*}}}*/
+    }
+
+/*}}}*/
 
     public function additionProvider()/*{{{*/
     {
@@ -44,18 +49,25 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
             [new Complex(1, 0), new Complex(-1, 1), new Complex(0, 1)],
             [new Complex(1, -1), new Complex(-1, 1), new Complex(0, 0)],
         ];
-    }/*}}}*/
+    }
+
+/*}}}*/
 
     /**
-     * testDoSubstraction
+     * testDoSubstraction.
+     *
      * @dataProvider substractionProvider
      */
-    public function testDoSubstraction($a, $b, $expected) {/*{{{*/
+    public function testDoSubstraction($a, $b, $expected)
+    {/*{{{*/
         $actual = $this->_calculator->doSubstraction($a, $b);
         $this->assertEquals($expected, $actual);
-    }/*}}}*/
+    }
 
-    public function substractionProvider() {/*{{{*/
+/*}}}*/
+
+    public function substractionProvider()
+    {/*{{{*/
         return [
             [new Complex(1, 1), new Complex(1, 1), new Complex(0, 0)],
             [new Complex(0, 1), new Complex(1, 1), new Complex(-1, 0)],
@@ -73,16 +85,22 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
             [new Complex(1, 0), new Complex(-1, 1), new Complex(2, -1)],
             [new Complex(1, -1), new Complex(-1, 1), new Complex(2, -2)],
         ];
-    }/*}}}*/
+    }
+
+/*}}}*/
 
     /**
-     * testDoMultiplication
+     * testDoMultiplication.
+     *
      * @dataProvider multiplicationProvider
      */
-    public function testDoMultiplication($a, $b, $expected) {/*{{{*/
+    public function testDoMultiplication($a, $b, $expected)
+    {/*{{{*/
         $actual = $this->_calculator->doMultiplication($a, $b);
         $this->assertEquals($expected, $actual);
-    }/*}}}*/
+    }
+
+/*}}}*/
 
     public function multiplicationProvider()/*{{{*/
     {
@@ -93,13 +111,17 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
             [new Complex(-1, 1), new Complex(1, -1), new Complex(0, 2)],
             [new Complex(-2, 1), new Complex(1, -2), new Complex(0, 5)],
         ];
-    }/*}}}*/
+    }
+
+/*}}}*/
 
     /**
-     * testDoDivision
+     * testDoDivision.
+     *
      * @dataProvider divisionProvider
      */
-    public function testDoDivision($numenator, $denominator, $expected) {
+    public function testDoDivision($numenator, $denominator, $expected)
+    {
         $actual = $this->_calculator->doDivision($numenator, $denominator);
         $this->assertEquals($expected, $actual);
     }
@@ -117,7 +139,8 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * testDoDivisionException
+     * testDoDivisionException.
+     *
      * @dataProvider divisionExceptionProvider
      * @expectedException InvalidArgumentException
      */

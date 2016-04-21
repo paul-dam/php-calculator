@@ -1,8 +1,9 @@
-<?php namespace Pdam\Behaviors\Substraction;
+<?php
 
-use Pdam\Behaviors\Substraction;
+namespace Pdam\Behaviors\Substraction;
+
 use Pdam\Behaviors\Addition\Complex as ComplexAdditionBehavior;
-use Pdam\Struct\Complex as StructComplex;
+use Pdam\Behaviors\Substraction;
 
 class Complex extends ComplexAdditionBehavior implements Substraction
 {
