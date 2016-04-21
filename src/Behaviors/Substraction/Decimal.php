@@ -1,4 +1,6 @@
-<?php namespace Pdam\Behaviors\Substraction;
+<?php
+
+namespace Pdam\Behaviors\Substraction;
 
 use Pdam\Behaviors\Substraction;
 
@@ -11,6 +13,6 @@ class Decimal implements Substraction
 {
     public function execute($a, $b)
     {
-        return ($a - $b);
+        return $a - $b;
     }
 }

@@ -1,4 +1,6 @@
-<?php namespace Pdam\Behaviors\Division;
+<?php
+
+namespace Pdam\Behaviors\Division;
 
 use Pdam\Behaviors\Division;
 use Pdam\Struct\Complex as StructComplex;
@@ -37,6 +39,6 @@ class Complex implements Division
             )
         );
 
-        return($result);
+        return $result;
     }
 }

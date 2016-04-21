@@ -1,4 +1,6 @@
-<?php namespace Pdam\Behaviors\Division;
+<?php
+
+namespace Pdam\Behaviors\Division;
 
 use Pdam\Behaviors\Division;
 

@@ -1,10 +1,12 @@
-<?php namespace Pdam\Calculator;
+<?php
 
-use \Pdam\Behaviors\Addition\Decimal as DecimalAdditionBehavior;
-use \Pdam\Behaviors\Division\Decimal as DecimalDivisionBehavior;
-use \Pdam\Behaviors\Substraction\Decimal as DecimalSubstractionBehavior;
-use \Pdam\Behaviors\Multiplication\Decimal as DecimalMultiplicationBehavior;
-use \Pdam\Calculator;
+namespace Pdam\Calculator;
+
+use Pdam\Behaviors\Addition\Decimal as DecimalAdditionBehavior;
+use Pdam\Behaviors\Division\Decimal as DecimalDivisionBehavior;
+use Pdam\Behaviors\Multiplication\Decimal as DecimalMultiplicationBehavior;
+use Pdam\Behaviors\Substraction\Decimal as DecimalSubstractionBehavior;
+use Pdam\Calculator;
 
 class Decimal extends Calculator
 {

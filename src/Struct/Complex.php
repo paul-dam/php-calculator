@@ -1,4 +1,6 @@
-<?php namespace Pdam\Struct;
+<?php
+
+namespace Pdam\Struct;
 
 class Complex
 {
@@ -11,19 +13,23 @@ class Complex
     protected $_re;
     protected $_im;
 
-    public function getRe() {
+    public function getRe()
+    {
         return $this->_re;
     }
 
-    public function setRe($value) {
+    public function setRe($value)
+    {
         $this->_re = $value;
     }
 
-    public function getIm() {
+    public function getIm()
+    {
         return $this->_im;
     }
 
-    public function setIm($value) {
+    public function setIm($value)
+    {
         $this->_im = $value;
     }
 }
