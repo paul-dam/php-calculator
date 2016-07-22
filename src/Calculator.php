@@ -2,10 +2,10 @@
 
 namespace Pdam;
 
-use Pdam\Behaviors\Addition;
-use Pdam\Behaviors\Division;
-use Pdam\Behaviors\Multiplication;
-use Pdam\Behaviors\Substraction;
+use Pdam\Behavior\AdditionInterface;
+use Pdam\Behavior\DivisionInterface;
+use Pdam\Behavior\MultiplicationInterface;
+use Pdam\Behavior\SubstractionInterface;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
@@ -20,10 +20,10 @@ abstract class Calculator
     protected $divisionBehavior;
 
     public function __construct(
-        Addition $additionBehavior,
-        Division $divisionBehavior,
-        Substraction $substractionBehavior,
-        Multiplication $multiplicationBehavior
+        AdditionInterface $additionBehavior,
+        DivisionInterface $divisionBehavior,
+        SubstractionInterface $substractionBehavior,
+        MultiplicationInterface $multiplicationBehavior
     ) {
         $this->additionBehavior = $additionBehavior;
         $this->divisionBehavior = $divisionBehavior;

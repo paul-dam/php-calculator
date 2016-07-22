@@ -1,10 +1,10 @@
 <?php
 
-namespace Pdam\Behaviors\Division;
+namespace Pdam\Behavior\Decimal;
 
-use Pdam\Behaviors\Division;
+use Pdam\Behavior\DivisionInterface;
 
-class Decimal implements Division
+class Division implements DivisionInterface
 {
     public function execute($numerator, $denominator)
     {

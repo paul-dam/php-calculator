@@ -1,11 +1,11 @@
 <?php
 
-namespace Pdam\Behaviors\Addition;
+namespace Pdam\Behavior\Complex;
 
-use Pdam\Behaviors\Addition;
+use Pdam\Behavior\AdditionInterface;
 use Pdam\Struct\Complex as StructComplex;
 
-class Complex implements Addition
+class Addition implements AdditionInterface
 {
     public function execute($left, $right)
     {

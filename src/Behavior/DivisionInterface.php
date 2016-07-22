@@ -1,13 +1,13 @@
 <?php
 
-namespace Pdam\Behaviors;
+namespace Pdam\Behavior;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.LongVariable)
  * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
-interface Substraction
+interface DivisionInterface
 {
     public function execute($a, $b);
 }

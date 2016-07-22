@@ -2,20 +2,20 @@
 
 namespace Pdam\Calculator;
 
-use Pdam\Behaviors\Addition\Complex as ComplexAdditionBehavior;
-use Pdam\Behaviors\Division\Complex as ComplexDivisionBehavior;
-use Pdam\Behaviors\Multiplication\Complex as ComplexMultiplicationBehavior;
-use Pdam\Behaviors\Substraction\Complex as ComplexSubstractionBehavior;
+use Pdam\Behavior\Complex\Addition;
+use Pdam\Behavior\Complex\Division;
+use Pdam\Behavior\Complex\Multiplication;
+use Pdam\Behavior\Complex\Substraction;
 use Pdam\Calculator;
 
 class Complex extends Calculator
 {
     public function __construct()
     {
-        $additionBehavior = new ComplexAdditionBehavior();
-        $divisionBehavior = new ComplexDivisionBehavior();
-        $substractionBehavior = new ComplexSubstractionBehavior();
-        $multiplicationBehavior = new ComplexMultiplicationBehavior();
+        $additionBehavior = new Addition();
+        $divisionBehavior = new Division();
+        $substractionBehavior = new Substraction();
+        $multiplicationBehavior = new Multiplication();
 
         parent::__construct(
             $additionBehavior,

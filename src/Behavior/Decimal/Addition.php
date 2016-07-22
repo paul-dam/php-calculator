@@ -1,13 +1,13 @@
 <?php
 
-namespace Pdam\Behaviors\Addition;
+namespace Pdam\Behavior\Decimal;
 
-use Pdam\Behaviors\Addition;
+use Pdam\Behavior\AdditionInterface;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  */
-class Decimal implements Addition
+class Addition implements AdditionInterface
 {
     public function execute($a, $b)
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Pdam\Behaviors\Division;
+namespace Pdam\Behavior\Complex;
 
-use Pdam\Behaviors\Division;
+use Pdam\Behavior\DivisionInterface;
 use Pdam\Struct\Complex as StructComplex;
 
-class Complex implements Division
+class Division implements DivisionInterface
 {
     public function execute($numenator, $denominator)
     {

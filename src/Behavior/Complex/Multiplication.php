@@ -1,14 +1,14 @@
 <?php
 
-namespace Pdam\Behaviors\Multiplication;
+namespace Pdam\Behavior\Complex;
 
-use Pdam\Behaviors\Multiplication;
+use Pdam\Behavior\MultiplicationInterface;
 use Pdam\Struct\Complex as StructComplex;
 
 /**
  * Complex MultiplicationBehavior.
  */
-class Complex implements Multiplication
+class Multiplication implements MultiplicationInterface
 {
     public function execute($left, $right)
     {

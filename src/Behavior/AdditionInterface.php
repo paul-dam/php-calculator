@@ -1,11 +1,11 @@
 <?php
 
-namespace Pdam\Behaviors;
+namespace Pdam\Behavior;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  */
-interface Addition
+interface AdditionInterface
 {
     public function execute($a, $b);
 }
