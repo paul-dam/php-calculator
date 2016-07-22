@@ -1,15 +1,15 @@
 <?php
 
-namespace Pdam\Behaviors\Substraction;
+namespace Pdam\Behavior\Decimal;
 
-use Pdam\Behaviors\Substraction;
+use Pdam\Behavior\SubstractionInterface;
 
 /**
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.LongVariable)
  * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
-class Decimal implements Substraction
+class Substraction implements SubstractionInterface
 {
     public function execute($a, $b)
     {

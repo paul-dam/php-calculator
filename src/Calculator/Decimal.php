@@ -2,20 +2,20 @@
 
 namespace Pdam\Calculator;
 
-use Pdam\Behaviors\Addition\Decimal as DecimalAdditionBehavior;
-use Pdam\Behaviors\Division\Decimal as DecimalDivisionBehavior;
-use Pdam\Behaviors\Multiplication\Decimal as DecimalMultiplicationBehavior;
-use Pdam\Behaviors\Substraction\Decimal as DecimalSubstractionBehavior;
+use Pdam\Behavior\Decimal\Addition;
+use Pdam\Behavior\Decimal\Division;
+use Pdam\Behavior\Decimal\Multiplication;
+use Pdam\Behavior\Decimal\Substraction;
 use Pdam\Calculator;
 
 class Decimal extends Calculator
 {
     public function __construct()
     {
-        $additionBehavior = new DecimalAdditionBehavior();
-        $divisionBehavior = new DecimalDivisionBehavior();
-        $substractionBehavior = new DecimalSubstractionBehavior();
-        $multiplicationBehavior = new DecimalMultiplicationBehavior();
+        $additionBehavior = new Addition();
+        $divisionBehavior = new Division();
+        $substractionBehavior = new Substraction();
+        $multiplicationBehavior = new Multiplication();
 
         parent::__construct(
             $additionBehavior,
