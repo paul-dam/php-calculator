@@ -7,5 +7,5 @@ namespace Pdam\Behavior;
  */
 interface AdditionInterface
 {
-    public function execute($a, $b);
+    public function execute($left, $right);
 }
