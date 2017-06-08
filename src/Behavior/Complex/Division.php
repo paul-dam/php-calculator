@@ -5,7 +5,7 @@ use Pdam\Struct\Complex as StructComplex;
 
 class Division implements DivisionInterface
 {
-    public function execute($numenator, $denominator)
+    public function execute($numerator, $denominator)
     {
         $result = new StructComplex();
         if (0 == $denominator->getRe()
@@ -16,27 +16,30 @@ class Division implements DivisionInterface
             );
         }
 
-        $result->setRe(
-            (
-                ($numenator->getRe() * $denominator->getRe())
-                + ($numenator->getIm() * $denominator->getIm())
-            )
-            / (
-                pow($denominator->getRe(), 2)
-                + pow($denominator->getIm(), 2)
-            )
-        );
-        $result->setIm(
-            (
-                ($numenator->getIm() * $denominator->getRe())
-                - ($numenator->getRe() * $denominator->getIm())
-            )
-            / (
-                pow($denominator->getRe(), 2)
-                 + pow($denominator->getIm(), 2)
-            )
-        );
+        $result->setRe($this->calculateRational($numerator, $denominator));
+        $result->setIm($this->calculateImaginary($numerator, $denominator));
 
         return $result;
+    }
+
+    private function calculateRational($numerator, $denominator)
+    {
+        return (
+            ($numerator->getRe() * $denominator->getRe())
+            + ($numerator->getIm() * $denominator->getIm())
+        ) / ($this->powerReSumIm($denominator, 2));
+    }
+
+    private function calculateImaginary($numerator, $denominator)
+    {
+        return (
+            ($numerator->getIm() * $denominator->getRe())
+            - ($numerator->getRe() * $denominator->getIm())
+        ) / ($this->powerReSumIm($denominator, 2));
+    }
+
+    private function powerReSumIm(StructComplex $subject, $times)
+    {
+        return pow($subject->getRe(), $times) + pow($subject->getIm(), $times);
     }
 }
