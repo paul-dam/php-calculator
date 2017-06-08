@@ -12,7 +12,7 @@ class Decimal extends Calculator
     {
         $addition = new Addition();
         $division = new Division();
-        $substraction = new Substraction();
+        $substraction = new Substraction($addition);
         $multiplication = new Multiplication();
 
         parent::__construct(
