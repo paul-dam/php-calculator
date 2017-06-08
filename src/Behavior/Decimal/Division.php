@@ -8,7 +8,7 @@ class Division implements DivisionInterface
     {
         if (0 === $denominator) {
             throw new \InvalidArgumentException(
-                'Drugi argument dzielenia nie może wynosić 0'
+                'Denominator cannot be `0`';
             );
         }
 
