@@ -103,9 +103,9 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider divisionProvider
      */
-    public function testDoDivision($numenator, $denominator, $expected)
+    public function testDoDivision($numerator, $denominator, $expected)
     {
-        $actual = $this->calculator->doDivision($numenator, $denominator);
+        $actual = $this->calculator->doDivision($numerator, $denominator);
         $this->assertEquals($expected, $actual);
     }
 
@@ -127,9 +127,9 @@ class ComplexCalculatorTest extends \PHPUnit_Framework_TestCase
      * @dataProvider divisionExceptionProvider
      * @expectedException InvalidArgumentException
      */
-    public function testDoDivisionException($numenator, $denominator, $expected)
+    public function testDoDivisionException($numerator, $denominator, $expected)
     {
-        $actual = $this->calculator->doDivision($numenator, $denominator);
+        $actual = $this->calculator->doDivision($numerator, $denominator);
         $this->assertEquals($expected, $actual);
     }
 
