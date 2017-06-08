@@ -1,6 +1,4 @@
-<?php
-
-namespace Pdam\Behavior;
+<?php namespace Pdam\Behavior;
 
 interface MultiplicationInterface
 {

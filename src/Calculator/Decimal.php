@@ -1,6 +1,4 @@
-<?php
-
-namespace Pdam\Calculator;
+<?php namespace Pdam\Calculator;
 
 use Pdam\Behavior\Decimal\Addition;
 use Pdam\Behavior\Decimal\Division;
@@ -12,16 +10,16 @@ class Decimal extends Calculator
 {
     public function __construct()
     {
-        $additionBehavior = new Addition();
-        $divisionBehavior = new Division();
-        $substractionBehavior = new Substraction();
-        $multiplicationBehavior = new Multiplication();
+        $addition = new Addition();
+        $division = new Division();
+        $substraction = new Substraction();
+        $multiplication = new Multiplication();
 
         parent::__construct(
-            $additionBehavior,
-            $divisionBehavior,
-            $substractionBehavior,
-            $multiplicationBehavior
+            $addition,
+            $division,
+            $substraction,
+            $multiplication
         );
     }
 }

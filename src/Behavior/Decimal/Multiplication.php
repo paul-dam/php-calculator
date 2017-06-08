@@ -1,6 +1,4 @@
-<?php
-
-namespace Pdam\Behavior\Decimal;
+<?php namespace Pdam\Behavior\Decimal;
 
 use Pdam\Behavior\MultiplicationInterface;
 

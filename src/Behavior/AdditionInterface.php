@@ -1,10 +1,5 @@
-<?php
+<?php namespace Pdam\Behavior;
 
-namespace Pdam\Behavior;
-
-/**
- * @SuppressWarnings(PHPMD.ShortVariable)
- */
 interface AdditionInterface
 {
     public function execute($left, $right);

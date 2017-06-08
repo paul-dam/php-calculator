@@ -4,33 +4,26 @@ namespace Test\Pdam\Calculator;
 
 use Pdam\Calculator\Decimal as DecimalCalculator;
 
-/**
- * @SuppressWarnings(PHPMD.ShortVariable)
- */
 class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    protected $_calculator;
+    protected $calculator;
 
-    public function setUp()/*{{{*/
+    public function setUp()
     {
-        $this->_calculator = new DecimalCalculator();
+        $this->calculator = new DecimalCalculator();
     }
-
-/*}}}*/
 
     /**
      * testDoAddition.
      *
      * @dataProvider additionProvider
      */
-    public function testDoAddition($a, $b, $expected)/*{{{*/
+    public function testDoAddition($a, $b, $expected)
     {
-        $this->assertEquals($expected, $this->_calculator->doAddition($a, $b));
+        $this->assertEquals($expected, $this->calculator->doAddition($a, $b));
     }
 
-/*}}}*/
-
-    public function additionProvider()/*{{{*/
+    public function additionProvider()
     {
         return [
             [0, 0, 0],
@@ -40,22 +33,18 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-/*}}}*/
-
     /**
      * testDoDivision.
      *
      * @dataProvider divisionProvider
      */
-    public function testDoDivision($a, $b, $expected)/*{{{*/
+    public function testDoDivision($a, $b, $expected)
     {
-        $actual = $this->_calculator->doDivision($a, $b);
+        $actual = $this->calculator->doDivision($a, $b);
         $this->assertEquals($expected, $actual);
     }
 
-/*}}}*/
-
-    public function divisionProvider()/*{{{*/
+    public function divisionProvider()
     {
         return [
             [0, 1, 0],
@@ -65,23 +54,19 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-/*}}}*/
-
     /**
      * testDoDivisionException.
      *
      * @dataProvider divisionProviderException
      * @expectedException InvalidArgumentException
      */
-    public function testDoDivisionException($a, $b, $expected)/*{{{*/
+    public function testDoDivisionException($a, $b, $expected)
     {
-        $actual = $this->_calculator->doDivision($a, $b);
+        $actual = $this->calculator->doDivision($a, $b);
         $this->assertEquals($expected, $actual);
     }
 
- /*}}}*/
-
-    public function divisionProviderException()/*{{{*/
+    public function divisionProviderException()
     {
         return [
             [0, 0, 0],
@@ -89,22 +74,18 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-/*}}}*/
-
     /**
      * testDoSubstraction.
      *
      * @dataProvider substractionProvider
      */
-    public function testDoSubstraction($a, $b, $expected)/*{{{*/
+    public function testDoSubstraction($a, $b, $expected)
     {
-        $actual = $this->_calculator->doSubstraction($a, $b);
+        $actual = $this->calculator->doSubstraction($a, $b);
         $this->assertEquals($expected, $actual);
     }
 
-/*}}}*/
-
-    public function substractionProvider()/*{{{*/
+    public function substractionProvider()
     {
         return [
             [0, 0, 0],
@@ -116,20 +97,16 @@ class DecimalCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-/*}}}*/
-
     /**
      * testDoSubstraction.
      *
      * @dataProvider multiplycationProvider
      */
-    public function testDoMultiplication($a, $b, $expected)/*{{{*/
+    public function testDoMultiplication($a, $b, $expected)
     {
-        $actual = $this->_calculator->doMultiplication($a, $b);
+        $actual = $this->calculator->doMultiplication($a, $b);
         $this->assertEquals($expected, $actual);
     }
-
-/*}}}*/
 
     public function multiplycationProvider()
     {

@@ -1,6 +1,4 @@
-<?php
-
-namespace Pdam\Behavior\Complex;
+<?php namespace Pdam\Behavior\Complex;
 
 use Pdam\Behavior\DivisionInterface;
 use Pdam\Struct\Complex as StructComplex;
