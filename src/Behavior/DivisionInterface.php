@@ -2,5 +2,5 @@
 
 interface DivisionInterface
 {
-    public function execute($a, $b);
+    public function execute($numerator, $denominator);
 }
