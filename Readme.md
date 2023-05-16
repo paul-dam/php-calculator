@@ -1,6 +1,6 @@
 # PHP Calculator library
 
-⚠️ This is just a sandbox project, installing it as an package is not recomended.
+⚠️ This is just a sandbox project, installing it as a package is not recomended.
 
 [![Latest Stable Version](https://poser.pugx.org/pdam/calculator/v/stable)](https://packagist.org/packages/pdam/calculator)
 [![Total Downloads](https://poser.pugx.org/pdam/calculator/downloads)](https://packagist.org/packages/pdam/calculator)
